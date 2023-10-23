@@ -1,4 +1,4 @@
-# eosSupportBot
+# EOSSupportBot
 
 https://t.me/EOSSupportAccCreationPowerupbot
 

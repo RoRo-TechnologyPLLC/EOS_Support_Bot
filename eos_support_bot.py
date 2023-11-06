@@ -120,7 +120,12 @@ def send_keypairs(message):
 
     bot.send_message(chat_id, f"Use the Public Key to get an EOS account, Copy the Public Key below and send it in in the chat.")
     bot.send_message(chat_id, f"{public_key}")
-
+    
+    hyperlink_text = '<a href="https://help.eossupport.io/en/articles/5955271-how-to-change-your-keypairs-for-your-eos-account">the step-by-step link</a>'
+    message_text = f"SECURITY WARNING: Revealing Private Keys in Telegram poses a high risk. Please CHANGE YOUR KEYPAIRS after account creation. Here is a step-by-step tutorial on how to change KEYPAIRS after account creation.{hyperlink_text}"
+    
+    bot.send_message(chat_id, text=message_text, parse_mode='HTML')
+    
 @bot.message_handler(commands=['powerup'])
 def send_powerup(message):
     print (message.text)
